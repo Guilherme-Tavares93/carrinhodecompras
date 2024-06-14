@@ -1,0 +1,18 @@
+function calcularTotal() {
+    let fone = parseFloat(document.getElementById("fone").value);
+    let celular = parseFloat(document.getElementById("celular").value);
+    let oculos = parseFloat(document.getElementById("oculos").value);
+    const quantidade = parseInt(document.getElementById("quantidade").value);
+
+    const x = fone * quantidade;
+    const y = celular * quantidade;
+    const z = oculos * quantidade;
+
+    const total = carrinhodecompras(x, y, z);
+
+    document.getElementById("resultado").innerText = "Total: R$ " + total.toFixed(2);
+}
+
+function carrinhodecompras(x, y, z) {
+    return x + y + z;
+}
